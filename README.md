@@ -3,9 +3,10 @@
 My resume, typeset in [Typst](https://typst.app).
 
 - `resume.typ` is the content: edit this.
-- `template.typ` is the layout (fonts, spacing, section headings, the `entry` helper).
-- `fonts/` holds Carlito, an open-licensed (OFL) clone of Calibri with identical metrics, so the
-  PDF looks the same everywhere.
+- `template.typ` is the layout: a classical Greek look to match the αη brand, with an αη
+  monogram, the name in spaced capitals, a Greek-key band, sections numbered α β γ δ, and
+  Tyrian purple accents. Colours, sizes and the `entry` helper are at the top.
+- `fonts/` holds EB Garamond (OFL licence included), so the PDF looks the same everywhere.
 
 ## Build
 
@@ -25,11 +26,16 @@ release, so the current version is always at
 
 ```typ
 #entry(
-  [Company or Project — Short Description],
-  date: [Jan 2027 – Present],
-  subtitle: [Role, or the stack for a project],
+  [Role or Project],
+  detail: [Short description],        // optional, after a dot
+  place: [Company or University],     // optional, right-aligned italic
+  note: [Team · stack · or a note],   // optional, small caps under the title
+  start: [Jan 2027],                  // leave out `end` for "– Present"
+  end: [May 2027],                    // or use `date: [Expected May 2029]`
 )[
   - What you did, with a result
   - Another bullet
 ]
 ```
+
+Sections are `= Title`; they're numbered α, β, γ, … automatically.
