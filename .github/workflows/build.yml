@@ -1,0 +1,38 @@
+name: Build resume PDF
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Typst
+        run: |
+          curl -fsSL https://github.com/typst/typst/releases/download/v0.15.1/typst-x86_64-unknown-linux-musl.tar.xz \
+            | tar -xJ --strip-components=1 typst-x86_64-unknown-linux-musl/typst
+          ./typst --version
+
+      - name: Compile
+        run: ./typst compile --font-path fonts resume.typ Alejandro-Escamilla-Resume.pdf
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: resume
+          path: Alejandro-Escamilla-Resume.pdf
+
+      # Keep one rolling release, "latest", whose asset is always the current PDF.
+      - name: Publish to the latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view latest >/dev/null 2>&1 || \
+            gh release create latest --title "Latest resume" --notes "Built from main by GitHub Actions."
+          gh release upload latest Alejandro-Escamilla-Resume.pdf --clobber
