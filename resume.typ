@@ -74,6 +74,17 @@
   - Served as the primary contact for visitor concerns, maintaining CPR/First Aid certification for on-site emergencies
 ]
 
+= Involvement
+
+#entry(
+  [Design Team Member],
+  place: [Engineers Without Borders],
+  note: [Secor Water Treatment Plant Project],
+  start: [Sep 2026],
+)[
+  - Researched corporate grants to fund a village water treatment plant upgrade, aiming to keep residents’ water bills affordable
+]
+
 = Skills
 
 #row[Programming][Python#dot C++#dot JavaScript#dot Java]
