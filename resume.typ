@@ -4,7 +4,7 @@
   first: "Alejandro",
   last: "Escamilla",
   links: (
-    link("https://aescamilla.uk")[aescamilla.uk],
+    link("https://aescamilla.tech")[aescamilla.tech],
     link("mailto:ae42@illinois.edu")[ae42\@illinois.edu],
   ),
   more: (
