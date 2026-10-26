@@ -52,13 +52,15 @@
 = Experience
 
 #entry(
-  [Help Desk Student Consultant],
+  [Help Desk Team Lead],
   place: [University of Illinois Urbana-Champaign],
-  note: [Technology Services],
+  note: [Technology Services · Promoted from Help Desk Student Consultant],
   start: [Oct 2025],
 )[
-  - Provide Tier 1 support for UIUC accounts, campus network access, and Microsoft 365 across university services
-  - Troubleshoot connectivity, authentication, and software issues, escalating complex tickets to Tier 2 with documentation
+  - Supervise a team of student consultants, assigning tasks and spot-checking tickets for service quality
+  - Train and onboard new student employees, assisting with hiring decisions and performance feedback
+  - Deliver in-person classroom tech training for faculty and staff, alongside phone, email, and walk-in support
+  - Serve as the escalation point for complex tickets, mentoring consultants on troubleshooting and KB use
 ]
 
 #entry(
@@ -70,7 +72,6 @@
 )[
   - Directed a City Council-mandated initiative installing pier ID markers, cutting 911 response times
   - Scheduled and delegated daily tasks across a staff of 6–15
-  - Trained and onboarded new staff on safety, customer service, and facility procedures
   - Served as the primary contact for visitor concerns, maintaining CPR/First Aid certification for on-site emergencies
 ]
 
