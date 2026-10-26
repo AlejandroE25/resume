@@ -77,7 +77,7 @@
 
   // Sections: a Greek numeral in purple, the title in spaced capitals, then a hairline.
   set heading(numbering: "α")
-  show heading.where(level: 1): it => block(above: 1.35em, below: 0.8em, width: 100%)[
+  show heading.where(level: 1): it => block(above: 1.1em, below: 0.65em, width: 100%)[
     #set text(size: sizes.heading, weight: "semibold", number-type: "lining")
     #box(text(fill: purple, style: "italic", weight: "regular", size: sizes.heading * 1.3, counter(heading).display(it.numbering)))
     #h(0.55em)
@@ -110,7 +110,7 @@
 //   SMALL-CAPS NOTE                                  START – END (or DATE)
 // then any bullet points. Leave out `end` for "– Present"; use `date` for a single date.
 #let entry(title, detail: none, place: none, note: none, start: none, end: none, date: none, body) = block(
-  above: 1.05em, below: 0em, breakable: false,
+  above: 0.85em, below: 0em, breakable: false,
 )[
   #set text(size: sizes.item)
   #text(weight: "semibold", title)#if detail != none [#dot#text(fill: inks.medium, style: "italic", detail)]
